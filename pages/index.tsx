@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { ColorModeScript } from "@chakra-ui/react";
 import { theme } from "../styles/theme";
+
+import { Heading, Text, Button, ColorModeScript } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,16 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <h1 className={styles.title}>Welcome to Inthanity</h1>
+        <Heading as="h1" size="2xl">
+          Welcome to Inthanity
+        </Heading>
+        <Heading as="h2" size="xl">
+          Fact: 88% of new business comes from referrals
+        </Heading>
+        <Text>Let&apos;s make a referral!</Text>
+        <Button size="lg" height="200px" width="400px">
+          <Heading>Make a Referral</Heading>
+        </Button>
       </main>
     </div>
   );
